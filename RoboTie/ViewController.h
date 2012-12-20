@@ -15,13 +15,17 @@
     NSInputStream *inputStream;
     NSOutputStream *outputStream;
     NSString *ipAddress;
-    bool isConnected;
 }
+
+@property (strong, nonatomic) IBOutlet UIButton *connectButton;
+@property (strong, nonatomic) IBOutlet UIButton *activateButton;
+@property (strong, nonatomic) IBOutlet UIButton *resetButton;
 
 @property (strong, nonatomic) IBOutlet UILabel *status;
 @property (strong, nonatomic) IBOutlet UILabel *zaxisDisplay;
 
 -(IBAction)toggleConnect: (id)sender;
+-(IBAction)resetTie: (id)sender;
 -(IBAction)toggleSettings: (id)sender;
 
 @end

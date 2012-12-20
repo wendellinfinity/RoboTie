@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sS9-dJ-TnG">
@@ -38,9 +38,6 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" Status: Disconnected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWn-eT-vIT">
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="o0p-md-qsA"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -56,6 +53,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7Z-yW-gd8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="IcT-SP-am6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Activate">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,26 +65,47 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uE-EO-aeD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="0eu-fR-nea"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTie:" destination="2" eventType="touchUpInside" id="z3E-g9-ekd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="sS9-dJ-TnG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0Io-SS-gRt"/>
                             <constraint firstAttribute="trailing" secondItem="NWn-eT-vIT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="404-ZS-WIs"/>
-                            <constraint firstItem="B74-oJ-PQJ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="148" id="BFP-9m-QEE"/>
+                            <constraint firstItem="6uE-EO-aeD" firstAttribute="baseline" secondItem="K7Z-yW-gd8" secondAttribute="baseline" type="default" id="CF3-Sf-DuD"/>
+                            <constraint firstItem="K7Z-yW-gd8" firstAttribute="top" secondItem="3" secondAttribute="top" constant="116" id="Mck-P0-tYk"/>
                             <constraint firstAttribute="bottom" secondItem="sS9-dJ-TnG" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="OKt-o2-TJH"/>
                             <constraint firstItem="L6A-f0-5gd" firstAttribute="top" secondItem="NWn-eT-vIT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Q6A-K9-PIf"/>
                             <constraint firstItem="L6A-f0-5gd" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ugy-MV-L8K"/>
                             <constraint firstItem="sS9-dJ-TnG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="WYN-WN-dU4"/>
-                            <constraint firstAttribute="bottom" secondItem="K7Z-yW-gd8" secondAttribute="bottom" constant="141" id="cBa-YT-Ekm"/>
-                            <constraint firstItem="K7Z-yW-gd8" firstAttribute="centerX" secondItem="B74-oJ-PQJ" secondAttribute="centerX" type="default" id="dI0-dM-Cji"/>
+                            <constraint firstItem="B74-oJ-PQJ" firstAttribute="centerX" secondItem="sS9-dJ-TnG" secondAttribute="centerX" type="default" id="ZGP-iH-wov"/>
                             <constraint firstItem="NWn-eT-vIT" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="eYv-Ow-0Rw"/>
-                            <constraint firstAttribute="trailing" secondItem="K7Z-yW-gd8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="i5L-YG-lSX"/>
+                            <constraint firstItem="L6A-f0-5gd" firstAttribute="top" secondItem="3" secondAttribute="top" constant="58" id="kkx-GF-JY3"/>
+                            <constraint firstItem="B74-oJ-PQJ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="181" id="lKe-bH-XRO"/>
                             <constraint firstAttribute="trailing" secondItem="L6A-f0-5gd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="us5-FB-VUz"/>
                             <constraint firstItem="NWn-eT-vIT" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="w29-NM-GaS"/>
+                            <constraint firstAttribute="trailing" secondItem="6uE-EO-aeD" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xat-oi-61U"/>
                             <constraint firstItem="K7Z-yW-gd8" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xi0-o4-3XN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activateButton" destination="K7Z-yW-gd8" id="wdu-JD-HAs"/>
+                        <outlet property="connectButton" destination="L6A-f0-5gd" id="GTq-4H-gpJ"/>
+                        <outlet property="resetButton" destination="6uE-EO-aeD" id="Rlf-uF-SOH"/>
                         <outlet property="status" destination="NWn-eT-vIT" id="vUl-R7-pCA"/>
                         <outlet property="zaxisDisplay" destination="B74-oJ-PQJ" id="YCW-QU-4bM"/>
                     </connections>
@@ -97,7 +118,7 @@
             <objects>
                 <viewController id="dHT-d7-fAt" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eBN-5i-TJw">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67q-sB-Qcl">
@@ -162,8 +183,12 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="resetTie:"/>
                 <relationship kind="action" name="toggleConnect:"/>
                 <relationship kind="action" name="toggleSettings:"/>
+                <relationship kind="outlet" name="activateButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="connectButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="status" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="zaxisDisplay" candidateClass="UILabel"/>
             </relationships>
@@ -172,6 +197,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
